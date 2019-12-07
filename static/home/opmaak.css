@@ -1,0 +1,59 @@
+/* CSS Opmaak van DelFaveroFanClub */
+
+@import "https://fonts.googleapis.com/css?family=Roboto:400,700";
+/* https://daneden.github.io/animate.css */
+
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/blur-capacitors.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.color {
+    color: #28696A;
+}
+
+.subcolor {
+    background-color: #28696A;
+    color: white;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+.colorbk {
+    color: black;
+}
+
+iframe {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .w3-row-padding img {
+        padding-bottom: 20px;
+    }
+    
+}
