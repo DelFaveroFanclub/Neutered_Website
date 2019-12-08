@@ -1,0 +1,120 @@
+{% load static %}
+
+<html>
+<title>Tradamore BV</title>
+<link rel = "icon" href = "/media/home/logo_big.jpg" type = "image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'home/w3.css' %}">
+<link rel="stylesheet" href="{% static 'home/opmaak.css' %}">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css">
+
+<head>
+    <script language="JavaScript">
+    function showInput() {
+		window.location = '#results';
+		document.getElementById('bar').style.display = "block";
+		setTimeout(function(){
+		document.getElementById('bar').style.width = "20%";
+		document.getElementById('bar').innerHTML = "20%";
+		}, 2000);
+		setTimeout(function(){
+		document.getElementById('bar').style.width = "30%";
+		document.getElementById('bar').innerHTML = "30%";
+		}, 3000);
+		setTimeout(function(){
+		document.getElementById('bar').style.width = "60%";
+		document.getElementById('bar').innerHTML = "60%";
+		}, 6000);
+		setTimeout(function(){
+		document.getElementById('bar').style.width = "100%";
+		document.getElementById('bar').innerHTML = "100%";
+		}, 10000);
+		setTimeout(function(){
+		document.getElementById('bar').style.display = "none";
+		}, 10500);
+		setTimeout(function(){
+		document.getElementById('motifs').style.display = "block";
+		}, 10501);
+    }
+  </script>
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar subcolor w3-card" id="myNavbar">
+	<a href="#" class="pull-left"><img src="/media/home/Picture3.png"></a>
+  </div>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-2 w3-display-container" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">FREE MOTIF DISCOVERY</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Tradamore</span><br>
+	<input type="file" class="w3-button subcolor w3-padding-large w3-large w3-margin-top w3-hover-opacity-off" name="myFile" multiple><br><br>
+	<input type="submit" onclick="showInput();" value="Submit" class="w3-button subcolor w3-padding-large w3-large w3-margin-top w3-hover-opacity-off">
+  </div>
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="results">
+  <p><span id='display'></span></p>
+  <div hidden id='bar' class="w3-container w3-dark-grey w3-center" style="width:0%">0%</div>
+  <img hidden id='motifs' src="/media/home/motifs.png" alt="Results" style="width:100%">
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey">Back to top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="" title="W3.CSS" target="_blank" class="w3-hover-text-green">Sponsor</a></p>
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

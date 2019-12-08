@@ -21,6 +21,13 @@ body, html {
   min-height: 100%;
 }
 
+.bgimg-2 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../../../media/home/soft.jpg");
+  min-height: 100%;
+}
+
 .w3-bar .w3-button {
   padding: 16px;
 }
